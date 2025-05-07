@@ -1,4 +1,4 @@
-#Real-time Vehicle Detection and Tracking with YOLO 🚙🚕
+# Real-time Vehicle Detection and Tracking with YOLO 🚙🚕
 VehicleDetectionTracker represents a personal exploration into real-time vehicle detection and tracking. Built with Ultralytics' YOLO framework, this proof of concept aims to showcase YOLO's potential for identifying and following vehicles in visual media.
 
 # Ultralytics YOLO11
