@@ -1,12 +1,12 @@
-# Real-time Vehicle Detection and Tracking with YOLO 🚙🚕
-VehicleDetectionTracker represents a personal exploration into real-time vehicle detection and tracking. Built with Ultralytics' YOLO framework, this proof of concept aims to showcase YOLO's potential for identifying and following vehicles in visual media.
+# Real-time Vehicle Detection and Tracking with YOLO11 🚙🚕
+Vehicle-Detection-and-Tracking-using-YOLO11  represents a personal exploration into real-time vehicle detection and tracking. Built with Ultralytics' YOLO11 framework, this proof of concept aims to showcase YOLO's potential for identifying and following vehicles in visual media.
 
 
 - Detect vehicles in real-time video streams or from existing video files.
-- Track the location and movement of vehicles frame by frame.
-- Investigate vehicle classification by brand and color, utilizing MobileNet v3 with the Alibaba MNN backend.
+- Track the location and movement (downwards or upwards) of vehicles frame by frame.
+- Investigate vehicle classification by category (cars, trucks etc).
 - This proof of concept can form the basis for applications in traffic analysis, surveillance, and automated vehicle monitoring.
-- Explore the capabilities of YOLO for accurate object detection in dynamic settings.
+- Explore the capabilities of YOLO11 for accurate object detection in dynamic settings.
 
 # Ultralytics YOLO11
 Ultralytics YOLO11 is the the latest version of the acclaimed real-time object detection and image segmentation model. YOLO11 is built on cutting-edge advancements in deep learning and computer vision, offering unparalleled performance in terms of speed and accuracy. Its streamlined design makes it suitable for various applications and easily adaptable to different hardware platforms, from edge devices to cloud APIs.
@@ -17,24 +17,13 @@ Ultralytics YOLO11 is the the latest version of the acclaimed real-time object d
 Understanding the different modes that Ultralytics YOLO11 supports is critical to getting the most out of your models:
 
 **Train mode**: Fine-tune your model on custom or preloaded datasets.
-Train mode is used for training a YOLO11 model on a custom dataset. In this mode, the model is trained using the specified dataset and hyperparameters. The training process involves optimizing the model's parameters so that it can accurately predict the classes and locations of objects in an image. Training is essential for creating models that can recognize specific objects relevant to your application.
-
 **Val mode**: A post-training checkpoint to validate model performance.
-Val mode is used for validating a YOLO11 model after it has been trained. In this mode, the model is evaluated on a validation set to measure its accuracy and generalization performance. Validation helps identify potential issues like overfitting and provides metrics such as mean Average Precision (mAP) to quantify model performance. This mode is crucial for tuning hyperparameters and improving overall model effectiveness.
-
 **Predict mode**: Unleash the predictive power of your model on real-world data.
-Predict mode is used for making predictions using a trained YOLO11 model on new images or videos. In this mode, the model is loaded from a checkpoint file, and the user can provide images or videos to perform inference. The model identifies and localizes objects in the input media, making it ready for real-world applications. Predict mode is the gateway to applying your trained model to solve practical problems.
-
 **Export mode**: Make your model deployment-ready in various formats.
-Export mode is used for converting a YOLO11 model to formats suitable for deployment across different platforms and devices. This mode transforms your PyTorch model into optimized formats like ONNX, TensorRT, or CoreML, enabling deployment in production environments. Exporting is essential for integrating your model with various software applications or hardware devices, often resulting in significant performance improvements.
-
 **Track mode**: Extend your object detection model into real-time tracking applications.
-Track mode extends YOLO11's object detection capabilities to track objects across video frames or live streams. This mode is particularly valuable for applications requiring persistent object identification, such as surveillance systems or self-driving cars. Track mode implements sophisticated algorithms like ByteTrack to maintain object identity across frames, even when objects temporarily disappear from view.
-
 **Benchmark mode**: Analyze the speed and accuracy of your model in diverse deployment environments.
-Benchmark mode profiles the speed and accuracy of various export formats for YOLO11. This mode provides comprehensive metrics on model size, accuracy (mAP50-95 for detection tasks or accuracy_top5 for classification), and inference time across different formats like ONNX, OpenVINO, and TensorRT. Benchmarking helps you select the optimal export format based on your specific requirements for speed and accuracy in your deployment environment.
 
-# Objective: To classify test_images in different food categories using pre-trained YOLO11 model
+# Objective:  Real-time Vehicle Detection and Tracking with YOLO11 🚙🚕
  
 # DATASET
 [Dataset link](https://www.kaggle.com/datasets/trolukovich/food11-image-dataset)
