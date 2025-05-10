@@ -17,6 +17,8 @@ Ultralytics YOLO11 is the the latest version of the acclaimed real-time object d
 
 Ultralytics supports a wide range of YOLO models, from early versions like YOLOv3 to the latest YOLO11. YOLO11 models are pretrained on the COCO dataset for Detection, Segmentation, and Pose Estimation. Additionally, Classification models pretrained on the ImageNet dataset are available. Tracking mode is compatible with all Detection, Segmentation, and Pose models.
 
+[Read more](https://github.com/ultralytics/ultralytics)
+
 ## Modes at a Glance
 Understanding the different modes that Ultralytics YOLO11 supports is critical to getting the most out of your models:
 
