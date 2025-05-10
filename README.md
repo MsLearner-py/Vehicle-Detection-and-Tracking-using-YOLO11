@@ -51,11 +51,9 @@ The processed data, including vehicle attributes and annotated frames, can be st
 
 
 # Let's Start
-1. Create a folder "YOLO-FOOD-CLASSIFICATION" (in my case it is in D drive)
-2. Download the dataset [Dataset link](https://www.kaggle.com/datasets/trolukovich/food11-image-dataset)
-3. Create a folder "custom_dataset" in YOLO-FOOD-CLASSIFICATION folder.
+1. Create a folder "[your folder name]"
+3. Copy the video in the created folder. I have already uploaded the video ""
 4. Copy training and validation folder from the downloaded dataset into "custom_dataset" folder. I have renamed training folder as "train" and validation folder as "val".
-5. For the easy execution, I have not copied / considered evaluation folder from the dataset. So I have only two image folders in custom_dataset.
 6. Create a new folder "test_images" in YOLO-FOOD-CLASSIFICATION. Copy 2 to 3 images of each class to be tested. I have searched the images from browser.
 7. Open Command prompt (cmd) and navigate to the folder "YOLO-FOOD-CLASSIFICATION".
 8. Make sure that python is installed.
