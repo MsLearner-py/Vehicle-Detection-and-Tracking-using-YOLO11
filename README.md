@@ -29,20 +29,22 @@ Understanding the different modes that Ultralytics YOLO11 supports is critical t
 
 # How vehicle detection using YOLO11 works
 
-1. Image Input:
+1. Image/video Input:
 YOLO11 processes video frames or still images as input. 
-2. Feature Extraction:
-The model's architecture, including a backbone and neck, extracts relevant features from the input image. 
+2. Feature and frame Extraction:
+The video is a collection of sequence of frames. The model works on each individual frame. The model's architecture, including a backbone and neck, extracts relevant features from the sequence of frames. 
 3. Multi-Scale Detection:
 YOLO11 employs detection layers at different scales (P3, P4, and P5) to handle objects of varying sizes, ensuring accurate detection of both large and small vehicles. 
 4. Object Detection:
-YOLO11 identifies potential objects (vehicles) within the image and predicts their bounding boxes. 
+YOLO11 identifies potential objects (vehicles) within the frames and predicts their bounding boxes. 
 5. Classification:
 It classifies the detected objects into different categories, such as car, truck, etc. 
 6. Bounding Box Output:
 YOLO11 generates bounding boxes around the detected vehicles, providing their location and size within the image. 
 7. Tracking (Optional):
-In some applications, like autonomous driving, YOLO11 can be used in conjunction with object tracking algorithms to follow vehicles across multiple frames, enabling the system to understand their movement and predict their future position. 
+In some applications, like autonomous driving, YOLO11 can be used in conjunction with object tracking algorithms to follow vehicles across multiple frames, enabling the system to understand their movement and predict their future position.
+8. Data output:
+The processed data, including vehicle attributes and annotated frames, can be stored, analyzed, or further processed according to the requirements.
  
 # DATASET
 [Dataset link](https://www.kaggle.com/datasets/trolukovich/food11-image-dataset)
