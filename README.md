@@ -54,8 +54,8 @@ The processed data, including vehicle attributes and annotated frames, can be st
 1. Create a folder "[your folder name]"
 2. Copy the video in the created folder. I have already uploaded the video [test-video.mp4]{https://github.com/MsLearner-py/Vehicle-Detection-and-Tracking-using-YOLO11/blob/main/test-video.mp4}
 3. Open Command prompt (cmd) and navigate to the folder that you have created.
-8. Make sure that python is installed.
-9. Create and activate Virtual environment (myenv) for windows: 
+4. Make sure that python is installed.
+5. Create and activate Virtual environment (myenv) for windows: 
 
        Step 1: --Installing virtualenv through pip--
                pip install virtualenv
@@ -66,26 +66,26 @@ The processed data, including vehicle attributes and annotated frames, can be st
        Step-3: -- Activate the virtual environment--
                myenv\Scripts\activate
    
-11. Now you will find a new folder "myenv" created in the folder.
-12. In this tutorial we are using "yolo11s-cls.pt" pretrained model of YOLO, which is used for classification. You can download any version of YOLO classification model version from the [link](https://github.com/ultralytics/ultralytics).
-13. Keep this downloaded file in YOLO-FOOD-CLASSIFICATION folder.
-15. To install jupyter notebook type the command--
+6. Now you will find a new folder "myenv" created in the folder.
+7. In this tutorial we are using "yolo11s-cls.pt" pretrained model of YOLO, which is used for classification. You can download any version of YOLO classification model version from the [link](https://github.com/ultralytics/ultralytics).
+8. Keep this downloaded file in YOLO-FOOD-CLASSIFICATION folder.
+9. To install jupyter notebook type the command--
     
         pip install jupyter notebook
-16. To install jupyter notebook type the command--
+10. To install jupyter notebook type the command--
     
         pip install ultralytics 
-18. After installation, you can launch Jupyter Notebook with the command--
+11. After installation, you can launch Jupyter Notebook with the command--
 
         jupyter notebook
-20. Create a new file (in my case it is PythonCode) and execute the cells
+12. Create a new file (in my case it is PythonCode) and execute the cells
 
-#!pip install ultralytics
+!pip install ultralytics
 import cv2
 from ultralytics import YOLO
 from collections import defaultdict
 
-# Load the YOLO model
+[//]: Load the YOLO model
 model = YOLO('yolo11n.pt')
 class_list = model.names 
 class_list
