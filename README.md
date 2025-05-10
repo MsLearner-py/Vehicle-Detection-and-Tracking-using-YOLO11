@@ -84,8 +84,8 @@ The processed data, including vehicle attributes and annotated frames, can be st
 <img width="741" alt="output" src="https://github.com/user-attachments/assets/e00597e1-2292-4b59-90e0-07456e42e7d5" />
 
 # Acknowledgments 🙏
-This package is powered by ultralytics YOLO for object detection.
-Special thanks to the open-source community for their contributions.
+- This package is powered by ultralytics YOLO for object detection.
+- Special thanks to the open-source community for their contributions.
 
 
    
