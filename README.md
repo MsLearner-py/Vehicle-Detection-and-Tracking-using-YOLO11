@@ -67,8 +67,8 @@ The processed data, including vehicle attributes and annotated frames, can be st
                myenv\Scripts\activate
    
 6. Now you will find a new folder "myenv" created in the folder.
-7. In this tutorial we are using "yolo11s-cls.pt" pretrained model of YOLO, which is used for classification. You can download any version of YOLO classification model version from the [link](https://github.com/ultralytics/ultralytics).
-8. Keep this downloaded file in YOLO-FOOD-CLASSIFICATION folder.
+7. In this tutorial we are using "yolo11n.pt" pretrained model of YOLO11.. You can download any version of YOLO model version from the [link](https://github.com/ultralytics/ultralytics).
+8. Keep this downloaded file in the created folder if not automatically downloaded.
 9. To install jupyter notebook type the command--
     
         pip install jupyter notebook
@@ -91,24 +91,6 @@ Read more about
 ![confusion_matrix_normalized](https://github.com/user-attachments/assets/e2cfb7f5-8555-49e7-bac2-6fbe8927f0c5)
 ![results](https://github.com/user-attachments/assets/d07d8924-375e-4120-aabc-5a4874b198aa)
 ![confusion_matrix](https://github.com/user-attachments/assets/cfaff543-db7f-4087-8b8f-9403f41ea3c9)
-
-
-epoch	time	train/loss	metrics/accuracy_top1	metrics/accuracy_top5	val/loss	lr/pg0	lr/pg1	lr/pg2
-1	1282.13	1.12327	0.85627	0.9895	0.45432	0.000221973	0.000221973	0.000221973
-2	2637.63	0.61349	0.85773	0.9898	0.47545	0.000389323	0.000389323	0.000389323
-3	3932.97	0.55246	0.86706	0.9898	0.4217	0.000501646	0.000501646	0.000501646
-4	5334.54	0.46953	0.88105	0.99446	0.38488	0.000419376	0.000419376	0.000419376
-5	6743.64	0.39123	0.89563	0.99359	0.33717	0.000336835	0.000336835	0.000336835
-6	8026.88	0.31035	0.90554	0.99475	0.30944	0.000254294	0.000254294	0.000254294
-7	9172.25	0.23643	0.92012	0.99679	0.26922	0.000171752	0.000171752	0.000171752
-8	10363.8	0.18238	0.92449	0.99679	0.23753	8.92E-05	8.92E-05	8.92E-05
-![image](https://github.com/user-attachments/assets/bc3da640-1252-4c1c-9bfc-f051eb87f18c)
-
-
-
-
-
-
 
 
 
