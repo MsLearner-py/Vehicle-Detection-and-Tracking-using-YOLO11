@@ -80,7 +80,7 @@ The processed data, including vehicle attributes and annotated frames, can be st
         jupyter notebook
 12. Create a new file (in my case it is PythonCode) and execute the cells.
     
-# Output (in runs folder)
+# Output
 <img width="741" alt="output" src="https://github.com/user-attachments/assets/e00597e1-2292-4b59-90e0-07456e42e7d5" />
 
 
