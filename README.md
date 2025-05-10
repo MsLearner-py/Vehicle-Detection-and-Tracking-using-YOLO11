@@ -52,12 +52,10 @@ The processed data, including vehicle attributes and annotated frames, can be st
 
 # Let's Start
 1. Create a folder "[your folder name]"
-3. Copy the video in the created folder. I have already uploaded the video [test-video.mp4]{}
-4. Copy training and validation folder from the downloaded dataset into "custom_dataset" folder. I have renamed training folder as "train" and validation folder as "val".
-6. Create a new folder "test_images" in YOLO-FOOD-CLASSIFICATION. Copy 2 to 3 images of each class to be tested. I have searched the images from browser.
-7. Open Command prompt (cmd) and navigate to the folder "YOLO-FOOD-CLASSIFICATION".
+2. Copy the video in the created folder. I have already uploaded the video [test-video.mp4]{https://github.com/MsLearner-py/Vehicle-Detection-and-Tracking-using-YOLO11/blob/main/test-video.mp4}
+3. Open Command prompt (cmd) and navigate to the folder that you have created.
 8. Make sure that python is installed.
-9. Create and activate Virtual environment (myenv): 
+9. Create and activate Virtual environment (myenv) for windows: 
 
        Step 1: --Installing virtualenv through pip--
                pip install virtualenv
@@ -68,37 +66,176 @@ The processed data, including vehicle attributes and annotated frames, can be st
        Step-3: -- Activate the virtual environment--
                myenv\Scripts\activate
    
-11. Now you will find a new folder "myenv" created in YOLO-FOOD-CLASSIFICATION folder.
+11. Now you will find a new folder "myenv" created in the folder.
 12. In this tutorial we are using "yolo11s-cls.pt" pretrained model of YOLO, which is used for classification. You can download any version of YOLO classification model version from the [link](https://github.com/ultralytics/ultralytics).
 13. Keep this downloaded file in YOLO-FOOD-CLASSIFICATION folder.
-14. To install jupyter notebook type the command--
+15. To install jupyter notebook type the command--
     
         pip install jupyter notebook
-15. After installation, you can launch Jupyter Notebook with the command--
+16. To install jupyter notebook type the command--
+    
+        pip install ultralytics 
+18. After installation, you can launch Jupyter Notebook with the command--
 
         jupyter notebook
-16. Once jupyter notebook is launched you can see all the folder of YOLO-FOOD-CLASSIFICATION.
-17. Create a new file (in my case it is PythonCode) and execute the cells
+20. Create a new file (in my case it is PythonCode) and execute the cells
 
-        pip install ultralytics  
-        pip install --upgrade pip
+#!pip install ultralytics
+import cv2
+from ultralytics import YOLO
+from collections import defaultdict
 
-        from ultralytics import YOLO
-        createdmodel=YOLO("yolo11s-cls.pt")
-        results= createdmodel.train(data="custom_dataset",epochs=8,imgsz=640 )
+# Load the YOLO model
+model = YOLO('yolo11n.pt')
+class_list = model.names 
+class_list
 
-        #USING PRETRAINED MODEL
-        model_test=YOLO("runs/classify/train/weights/best.pt")
-        results=model_test("test_images", save=True, imgsz=320, conf=0.7)
-        results[0].show()
+# Open the video file
+
+cap = cv2.VideoCapture('test-video.mp4')
+import cv2
+import pandas as pd
+from ultralytics import YOLO
+from collections import defaultdict
+
+# Load the YOLO model
+model = YOLO('yolo11n.pt')
+
+class_list = model.names  # List of class names
+
+# Open the video file
+
+cap = cv2.VideoCapture('test-video.mp4')
+
+
+# Define line positions for counting
+line_y_red = 298  # Red line position
+line_y_blue = line_y_red + 100  # Blue line position
+
+
+# Variables to store counting and tracking information
+counted_ids_red_to_blue = set()
+counted_ids_blue_to_red = set()
+
+# Dictionaries to count objects by class for each direction
+count_red_to_blue = defaultdict(int)  # Moving downwards
+count_blue_to_red = defaultdict(int)  # Moving upwards
+
+# State dictionaries to track which line was crossed first
+crossed_red_first = {}
+crossed_blue_first = {}
+
+
+
+# Loop through video frames
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    # Run YOLO tracking on the frame
+    results = model.track(frame, persist=True)
+
+    # Ensure results are not empty
+    if results[0].boxes.data is not None:
+        # Get the detected boxes, their class indices, and track IDs
+        boxes = results[0].boxes.xyxy.cpu()
+        track_ids = results[0].boxes.id.int().cpu().tolist()
+        class_indices = results[0].boxes.cls.int().cpu().tolist()
+        confidences = results[0].boxes.conf.cpu()
+
+
+        # Draw the lines on the frame
+        cv2.line(frame, (190, line_y_red), (850, line_y_red), (0, 0, 255), 3)
+        cv2.putText(frame, 'Red Line', (190, line_y_red - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
+
+        cv2.line(frame, (27, line_y_blue), (960, line_y_blue), (255, 0, 0), 3)
+        cv2.putText(frame, 'Blue Line', (27, line_y_blue - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
+
+        
+        # Loop through each detected object
+        for box, track_id, class_idx, conf in zip(boxes, track_ids, class_indices, confidences):
+            x1, y1, x2, y2 = map(int, box)
+
+            cx = (x1 + x2) // 2  # Calculate the center point
+            cy = (y1 + y2) // 2
+            
+            # Get the class name using the class index
+            class_name = class_list[class_idx]
+
+            # Draw a dot at the center and display the tracking ID and class name
+            cv2.circle(frame, (cx, cy), 4, (0, 0, 255), -1)
+            
+            cv2.putText(frame, f"ID: {track_id} {class_name}", (x1, y1 - 10),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
+            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2) 
+
+
+            # Check if the object crosses the red line
+            if line_y_red - 5 <= cy <= line_y_red + 5:
+                # Record that the object crossed the red line
+                if track_id not in crossed_red_first:
+                    crossed_red_first[track_id] = True
+
+            # Check if the object crosses the blue line
+            if line_y_blue - 5 <= cy <= line_y_blue + 5:
+                # Record that the object crossed the blue line
+                if track_id not in crossed_blue_first:
+                    crossed_blue_first[track_id] = True
+
+
+
+            # Counting logic for downward direction (red -> blue)
+            if track_id in crossed_red_first and track_id not in counted_ids_red_to_blue:
+                if line_y_blue - 5 <= cy <= line_y_blue + 5:
+                    counted_ids_red_to_blue.add(track_id)
+                    count_red_to_blue[class_name] += 1
+    
+            # Counting logic for upward direction (blue -> red)
+            if track_id in crossed_blue_first and track_id not in counted_ids_blue_to_red:
+                if line_y_red - 5 <= cy <= line_y_red + 5:
+                    counted_ids_blue_to_red.add(track_id)
+                    count_blue_to_red[class_name] += 1
+    
+    # Display the counts on the frame
+    y_offset = 30
+    for class_name, count in count_red_to_blue.items():
+        cv2.putText(frame, f'{class_name} (Down): {count}', (10, y_offset),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2, cv2.LINE_AA)
+        y_offset += 30
+
+    y_offset += 20  # Add spacing for upward counts
+    for class_name, count in count_blue_to_red.items():
+        cv2.putText(frame, f'{class_name} (Up): {count}', (10, y_offset),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2, cv2.LINE_AA)
+        y_offset += 30
+
+
 
     
-19. A new folder "runs" will be created. As we have a large dataset to process, it will take a good amount of time to get executed. 
+    # Show the frame
+    cv2.imshow("YOLO Object Tracking & Counting", frame)
 
-        runs --> classify --> predict and train
-    
-21. In the predict folder you will get the output of the images which we have given to test from "test_images" folder.
-22. In the train folder we will get weights (best.pt and last.pt), args, results, confusion matrixand other inferenced information.
+    # Exit loop if 'ESC' key is pressed
+    if cv2.waitKey(1) & 0xFF == 27:
+        break
+
+# Release resources
+cap.release()
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
 
 # Output (in runs folder)
 
