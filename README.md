@@ -2,11 +2,11 @@
 Vehicle-Detection-and-Tracking-using-YOLO11  represents a personal exploration into real-time vehicle detection and tracking. Built with Ultralytics' YOLO11 framework, this proof of concept aims to showcase YOLO's potential for identifying and following vehicles in visual media.
 
 
-- Detect vehicles in real-time video streams or from existing video files.
-- Track the location and movement (downwards or upwards) of vehicles frame by frame.
-- Investigate vehicle classification by category (cars, trucks etc).
-- This proof of concept can form the basis for applications in traffic analysis, surveillance, and automated vehicle monitoring.
-- Explore the capabilities of YOLO11 for accurate object detection in dynamic settings.
+- 📍 Detect vehicles in real-time video streams or from existing video files.
+- 🚀 Track the location and movement (downwards or upwards) of vehicles frame by frame.
+- 🚀 Investigate vehicle classification by category (cars, trucks etc).
+- 🔍 This proof of concept can form the basis for applications in traffic analysis, surveillance, and automated vehicle monitoring.
+- 🔍 Explore the capabilities of YOLO11 for accurate object detection in dynamic settings.
 
 # Ultralytics YOLO11
 Ultralytics YOLO11 is the the latest version of the acclaimed real-time object detection and image segmentation model. YOLO11 is built on cutting-edge advancements in deep learning and computer vision, offering unparalleled performance in terms of speed and accuracy. Its streamlined design makes it suitable for various applications and easily adaptable to different hardware platforms, from edge devices to cloud APIs.
