@@ -81,6 +81,8 @@ The processed data, including vehicle attributes and annotated frames, can be st
 12. Create a new file (in my case it is PythonCode) and execute the cells.
     
 # Output (in runs folder)
+<img width="741" alt="output" src="https://github.com/user-attachments/assets/e00597e1-2292-4b59-90e0-07456e42e7d5" />
+
 
 Read more about 
 - [Confusion Matrix](https://www.datacamp.com/tutorial/what-is-a-confusion-matrix-in-machine-learning) 
@@ -103,12 +105,7 @@ epoch	time	train/loss	metrics/accuracy_top1	metrics/accuracy_top5	val/loss	lr/pg
 ![image](https://github.com/user-attachments/assets/bc3da640-1252-4c1c-9bfc-f051eb87f18c)
 
 
-# Classified output images:
 
-![0](https://github.com/user-attachments/assets/f3278888-1729-414c-a67f-3ebacd48aa8d)
-![10](https://github.com/user-attachments/assets/228fbdaf-39c7-4f18-8b5f-c5437d1ee3b2)
-![11](https://github.com/user-attachments/assets/529a5718-fe09-4b59-ba18-d68a0d447bfe)
-![4](https://github.com/user-attachments/assets/857cbfdd-044b-424f-88a7-f94273428b8e)
 
 
 
