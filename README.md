@@ -25,7 +25,7 @@ Understanding the different modes that Ultralytics YOLO11 supports is critical t
 - **Track mode**: Extend your object detection model into real-time tracking applications.
 - **Benchmark mode**: Analyze the speed and accuracy of your model in diverse deployment environments.
 
-# Objective:  Real-time Vehicle Detection and Tracking with YOLO11 🚙🚕
+# How vehicle detection using YOLO11 works
 
 1. Image Input:
 YOLO11 processes video frames or still images as input. 
