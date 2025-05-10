@@ -26,6 +26,21 @@ Understanding the different modes that Ultralytics YOLO11 supports is critical t
 - **Benchmark mode**: Analyze the speed and accuracy of your model in diverse deployment environments.
 
 # Objective:  Real-time Vehicle Detection and Tracking with YOLO11 🚙🚕
+
+1. Image Input:
+YOLO11 processes video frames or still images as input. 
+2. Feature Extraction:
+The model's architecture, including a backbone and neck, extracts relevant features from the input image. 
+3. Multi-Scale Detection:
+YOLO11 employs detection layers at different scales (P3, P4, and P5) to handle objects of varying sizes, ensuring accurate detection of both large and small vehicles. 
+4. Object Detection:
+YOLO11 identifies potential objects (vehicles) within the image and predicts their bounding boxes. 
+5. Classification:
+It classifies the detected objects into different categories, such as car, truck, etc. 
+6. Bounding Box Output:
+YOLO11 generates bounding boxes around the detected vehicles, providing their location and size within the image. 
+7. Tracking (Optional):
+In some applications, like autonomous driving, YOLO11 can be used in conjunction with object tracking algorithms to follow vehicles across multiple frames, enabling the system to understand their movement and predict their future position. 
  
 # DATASET
 [Dataset link](https://www.kaggle.com/datasets/trolukovich/food11-image-dataset)
