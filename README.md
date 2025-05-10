@@ -46,53 +46,7 @@ In some applications, like autonomous driving, YOLO11 can be used in conjunction
 8. Data output:
 The processed data, including vehicle attributes and annotated frames, can be stored, analyzed, or further processed according to the requirements.
  
-# DATASET
-[Dataset link](https://www.kaggle.com/datasets/trolukovich/food11-image-dataset)
-Size: 1.19 GB
 
-This dataset contains 16643 food images grouped in 11 major food categories.
-
-## There are 3 splits in this dataset:
-```bash
-├──Evaluation
-├──Training
-├──Validation
-
-### Each split contains 11 categories of food:
-
-- Bread
-- Dairy product
-- Dessert
-- Egg
-- Fried food
-- Meat
-- Noodles-Pasta
-- Rice
-- Seafood
-- Soup
-- Vegetable-Fruit
-```
-
-# Directory Hierarchy
-
-```bash
-├── YOLO-FOOD-CLASSIFICATION FOLDER
-    ├── custom_dataset
-          ├── **train** (All 11 classes)
-          ├── **val** (All 11 classes)
-          ├── train.cache (created at runtime)
-          ├── val.cache (created at runtime)
-    ├── test_images (dataset of images to test)
-    ├── PythonCode (jupyter notebook)
-    ├── yolo11m-cls.pt/yolo11n.pt... (download the YOLO version)
-    ├── myenv (virtual environment)
-    ├── .ipynb_checkpoints (created at runtime)
-    ├── runs (Output folder)
-          ├── classify
-                    ├── predict
-                    ├── train
-          
-```
 
 # Let's Start
 1. Create a folder "YOLO-FOOD-CLASSIFICATION" (in my case it is in D drive)
