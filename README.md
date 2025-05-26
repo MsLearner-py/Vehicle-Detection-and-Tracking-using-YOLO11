@@ -65,8 +65,6 @@ In some applications, like autonomous driving, YOLO11 can be used in conjunction
 8. Data output:
 The processed data, including vehicle attributes and annotated frames, can be stored, analyzed, or further processed according to the requirements.
  
-
-
 # Let's Start
 1. Create a folder "[your folder name]"
 2. Copy the video in the created folder. I have already uploaded the video [test-video.mp4](https://github.com/MsLearner-py/Vehicle-Detection-and-Tracking-using-YOLO11/blob/main/test-video.mp4)
@@ -100,7 +98,7 @@ The processed data, including vehicle attributes and annotated frames, can be st
 # Output
 <img width="741" alt="output" src="https://github.com/user-attachments/assets/e00597e1-2292-4b59-90e0-07456e42e7d5" />
 
-# Acknowledgments 🙏
+## Acknowledgments 🙏
 - This package is powered by ultralytics YOLO for object detection.
 
 ## References
