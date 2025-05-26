@@ -10,6 +10,20 @@ Vehicle-Detection-and-Tracking-using-YOLO11  represents a personal exploration i
 
 This project serves as a demonstration of YOLO's robust object detection abilities in practical applications like traffic monitoring and video analytics. Though not a finished product, its primary aim is to validate the chosen approach and inform future development efforts.
 
+## Table of Contents
+
+1. [Real-time Vehicle Detection and Tracking with YOLO11](#real-time-vehicle-detection-and-tracking-with-yolo11-)
+2. [Ultralytics YOLO11](#ultralytics-yolo11)
+    - [Modes at a Glance](#modes-at-a-glance)
+3. [How vehicle detection using YOLO11 works](#how-vehicle-detection-using-yolo11-works-)
+4. [Let's Start](#lets-start)
+5. [Output](#output)
+6. [Acknowledgments](#acknowledgments-)
+    - [Project link](#project-link-httpsgithubcommslearner-pyvehicle-detection-and-tracking-using-yolo11treemain)
+
+*Note: Each entry links to the corresponding section header in the README.*
+
+
 # Ultralytics YOLO11
 Ultralytics YOLO11 is the the latest version of the acclaimed real-time object detection and image segmentation model. YOLO11 is built on cutting-edge advancements in deep learning and computer vision, offering unparalleled performance in terms of speed and accuracy. Its streamlined design makes it suitable for various applications and easily adaptable to different hardware platforms, from edge devices to cloud APIs.
 
