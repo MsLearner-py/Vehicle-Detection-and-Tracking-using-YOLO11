@@ -19,7 +19,7 @@ This project serves as a demonstration of YOLO's robust object detection abiliti
 4. [Let's Start](#lets-start)
 5. [Output](#output)
 6. [Acknowledgments](#acknowledgments-)
-    - [Project link](#project-link-httpsgithubcommslearner-pyvehicle-detection-and-tracking-using-yolo11treemain)
+    
 
 *Note: Each entry links to the corresponding section header in the README.*
 
