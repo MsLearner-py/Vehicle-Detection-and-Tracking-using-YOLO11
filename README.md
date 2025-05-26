@@ -105,25 +105,19 @@ The processed data, including vehicle attributes and annotated frames, can be st
 
 ## References
 
-1. Ultralytics YOLO Documentation  
-   [https://docs.ultralytics.com/](https://docs.ultralytics.com/)
+1. [Ultralytics YOLO Documentation ](https://docs.ultralytics.com/)
 
-2. Ultralytics YOLO GitHub Repository  
-   [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)
+2. [Ultralytics YOLO GitHub Repository ](https://github.com/ultralytics/ultralytics)
 
-3. YOLO: You Only Look Once — Real-Time Object Detection Paper  
-   Redmon, J., Divvala, S., Girshick, R., & Farhadi, A. (2016).  
-   [https://arxiv.org/abs/1506.02640](https://arxiv.org/abs/1506.02640)
+3. [YOLO: You Only Look Once — Real-Time Object Detection Paper  
+   Redmon, J., Divvala, S., Girshick, R., & Farhadi, A. (2016)](https://arxiv.org/abs/1506.02640)
 
-4. COCO: Common Objects in Context Dataset  
-   Lin, T.-Y., Maire, M., Belongie, S., et al. (2014).  
-   [https://cocodataset.org/](https://cocodataset.org/)
+4. [COCO: Common Objects in Context Dataset  
+   Lin, T.-Y., Maire, M., Belongie, S., et al. (2014)](https://cocodataset.org/)
 
-5. Virtualenv Documentation  
-   [https://virtualenv.pypa.io/en/latest/](https://virtualenv.pypa.io/en/latest/)
+5. [Virtualenv Documentation](https://virtualenv.pypa.io/en/latest/)
 
-6. Jupyter Notebook Documentation  
-   [https://jupyter-notebook.readthedocs.io/en/stable/](https://jupyter-notebook.readthedocs.io/en/stable/)
+6. [Jupyter Notebook Documentation](https://jupyter-notebook.readthedocs.io/en/stable/)
 
 
 
