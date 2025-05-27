@@ -117,6 +117,6 @@ The processed data, including vehicle attributes and annotated frames, can be st
 
 6. [Jupyter Notebook Documentation](https://jupyter-notebook.readthedocs.io/en/stable/)
 
-
+![Visitor Count](https://profile-counter.glitch.me/vyasdeepti/count.svg)
 
    
