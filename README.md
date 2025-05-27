@@ -1,3 +1,5 @@
+![Visitor Count](https://profile-counter.glitch.me/vyasdeepti/count.svg)
+
 # Real-time Vehicle Detection and Tracking with YOLO11 🚙🚕
 Vehicle-Detection-and-Tracking-using-YOLO11  represents a personal exploration into real-time vehicle detection and tracking. Built with Ultralytics' YOLO11 framework, this proof of concept aims to showcase YOLO's potential for identifying and following vehicles in visual media.
 
@@ -117,6 +119,6 @@ The processed data, including vehicle attributes and annotated frames, can be st
 
 6. [Jupyter Notebook Documentation](https://jupyter-notebook.readthedocs.io/en/stable/)
 
-![Visitor Count](https://profile-counter.glitch.me/vyasdeepti/count.svg)
+
 
    
